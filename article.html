@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dossier — L'article | Démocratisation de la vente de drogue en ligne</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="dossier-bar">
+  <span class="dossier-ref">Dossier nº 01 — Culture digitale</span>
+  <nav class="tabs" aria-label="Navigation du dossier">
+    <a class="tab" href="index.html">01 · Le sujet</a>
+    <a class="tab is-active" href="article.html">02 · L'article</a>
+    <a class="tab" href="avis.html">03 · Éclairage &amp; avis</a>
+  </nav>
+</header>
+
+<main class="page">
+
+  <section class="block">
+    <p class="kicker">Article choisi pour le commentaire individuel</p>
+    <h1>Platforms, risk perceptions, and reporting</h1>
+    <p class="citation">
+      Fuller, A., Vasek, M., Mariconti, E. &amp; Johnson, S. D. (2025). <em>Platforms, risk
+      perceptions, and reporting: the impact of illicit drug advertisements on social media
+      among UK secondary students.</em> Harm Reduction Journal.
+    </p>
+  </section>
+
+  <section class="block block--split">
+    <div class="block-main">
+      <h2>Champ disciplinaire et angle</h2>
+      <p>
+        L'article se situe au croisement de la criminologie numérique et de la santé
+        publique — les auteurs sont rattachés à un département dédié à la cybercriminalité
+        (University College London). Son angle distingue nettement cette étude des travaux
+        qualitatifs habituels sur le sujet, centrés sur l'expérience des vendeurs&nbsp;: ici,
+        la recherche adopte une démarche quantitative et se place du côté des adolescents
+        exposés, pas des dealers.
+      </p>
+
+      <h2>Méthode</h2>
+      <p>
+        Les auteurs ont mené une enquête en ligne auprès de <strong>1&nbsp;151 élèves
+        britanniques</strong> âgés de 13 à 18 ans, diffusée par deux associations de
+        prévention en milieu scolaire. Le questionnaire mesurait l'exposition aux publicités
+        pour des drogues illicites sur les réseaux sociaux, ainsi que son lien statistique
+        avec les attitudes et les comportements déclarés des jeunes.
+      </p>
+
+      <h2>Arguments principaux</h2>
+      <p>
+        <strong>29&nbsp;%</strong> des participants ont vu des publicités pour des drogues
+        illicites sans les avoir recherchées activement. Snapchat, Instagram et TikTok sont
+        identifiées comme les plateformes les plus concernées, avec des taux d'exposition
+        variables selon la plateforme. L'étude établit une association statistiquement
+        significative entre cette exposition et une <strong>baisse de la perception du
+        risque</strong>, ainsi qu'une <strong>hausse de l'intention d'achat</strong>. Un
+        résultat plus nuancé : TikTok apparaît aussi comme la plateforme où les jeunes
+        rencontrent le plus de messages de prévention.
+      </p>
+    </div>
+
+    <aside class="margin-note margin-note--alert">
+      <p class="margin-note__label">Chiffre clé</p>
+      <p>
+        Sur 1&nbsp;151 élèves interrogés (13-18 ans), près d'un tiers déclarent avoir vu une
+        publicité pour une drogue illicite sans jamais l'avoir cherchée.
+      </p>
+    </aside>
+  </section>
+
+  <section class="block">
+    <h2>Visualiser l'exposition non recherchée</h2>
+    <p>
+      Le graphique ci-dessous reprend l'unique statistique la plus solide de l'étude — la
+      part des élèves exposés sans recherche active — pour donner une échelle visuelle à ce
+      chiffre. Il est généré directement dans la page, sans image importée.
+    </p>
+    <div class="chart-wrap">
+      <canvas id="exposure-chart" width="640" height="260" role="img"
+        aria-label="Graphique : 29 pour cent des élèves interrogés ont vu une publicité pour une drogue illicite sans l'avoir recherchée, contre 71 pour cent qui ne l'ont pas signalé."></canvas>
+    </div>
+    <p class="figure-caption">Source&nbsp;: Fuller, Vasek, Mariconti &amp; Johnson (2025), n = 1&nbsp;151.</p>
+  </section>
+
+  <section class="block">
+    <h2>Entendre ce que l'étude mesure</h2>
+    <p>
+      L'un des résultats de l'article porte sur l'exposition <em>non recherchée</em> :
+      beaucoup d'adolescents découvrent ces publicités via des notifications ou du contenu
+      recommandé, sans avoir rien tapé dans une barre de recherche. Le bouton ci-dessous
+      reproduit, de façon neutre et synthétique, le type de son de notification qui
+      accompagne cette exposition passive — aucun enregistrement existant n'est utilisé, le
+      son est généré par le navigateur.
+    </p>
+    <button id="play-notification" class="sound-button" type="button">
+      ▶ Écouter une notification type
+    </button>
+    <p class="figure-caption" id="sound-status" aria-live="polite"></p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Exploration numérique collective — Aliyah, Rim, Lilia. Commentaire individuel : Lilia.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+/* ---------------------------------------------------------
+   Dossier — La démocratisation de la vente de drogue en ligne
+   Palette et typographie pensées comme un dossier d'enquête :
+   fond papier froid, encre presque noire, deux accents dédiés
+   (lecture factuelle vs. signal de risque).
+--------------------------------------------------------- */
+
+:root{
+  --paper: #E7E8E2;
+  --surface: #F5F4EF;
+  --ink: #1E2320;
+  --ink-soft: #4B534D;
+  --line: #B7B2A6;
+  --teal: #1F5B5B;
+  --brick: #B5482F;
+  --serif: "Source Serif 4", Georgia, serif;
+  --sans: "IBM Plex Sans", "Segoe UI", sans-serif;
+}
+
+*{ box-sizing: border-box; }
+
+html{ scroll-behavior: smooth; }
+
+body{
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  line-height: 1.55;
+}
+
+/* ---------- Barre de dossier / navigation par onglets ---------- */
+
+.dossier-bar{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 28px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.dossier-ref{
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.02em;
+  padding-bottom: 12px;
+}
+
+.tabs{
+  display: flex;
+  gap: 4px;
+}
+
+.tab{
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--ink-soft);
+  padding: 10px 16px;
+  border: 1px solid var(--line);
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  background: var(--paper);
+  transform: translateY(1px);
+}
+
+.tab.is-active{
+  color: var(--ink);
+  background: var(--surface);
+  border-color: var(--line);
+  border-bottom: 1px solid var(--surface);
+}
+
+.tab:hover{ color: var(--ink); }
+
+/* ---------- Structure générale ---------- */
+
+.page{
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 48px 28px 80px;
+}
+
+.block{ margin-bottom: 56px; }
+
+.block--split{
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: 40px;
+  align-items: start;
+}
+
+.block-main{ min-width: 0; }
+
+h1{
+  font-family: var(--serif);
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0 0 12px;
+  max-width: 22ch;
+}
+
+h2{
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+
+p{ margin: 0 0 16px; max-width: 68ch; }
+
+.lede{
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  margin-top: 4px;
+}
+
+.kicker{
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  color: var(--teal);
+  margin-bottom: 6px;
+}
+
+.citation{
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  border-left: 3px solid var(--teal);
+  padding-left: 14px;
+  max-width: 60ch;
+}
+
+/* ---------- Hero (page 1) ---------- */
+
+.hero{
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) 260px;
+  gap: 32px;
+  align-items: center;
+  padding-top: 24px;
+}
+
+.hero-figure{
+  margin: 0;
+  text-align: center;
+}
+
+.hero-figure figcaption{
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  margin-top: 8px;
+  max-width: 30ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.phone-illustration{ width: 100%; height: auto; }
+.phone-body{ fill: var(--ink); }
+.phone-screen{ fill: var(--surface); }
+.feed-item{ fill: var(--line); }
+.feed-item--flag{ fill: var(--brick); opacity: 0.85; }
+.tag-mark{ fill: var(--surface); }
+.feed-line{ fill: var(--line); opacity: 0.6; }
+.home-dot{ fill: var(--surface); opacity: 0.5; }
+
+/* ---------- Question centrale et notes en marge ---------- */
+
+.question{
+  font-family: var(--serif);
+  font-size: 1.3rem;
+  line-height: 1.4;
+  margin: 0;
+  padding: 20px 24px;
+  background: var(--surface);
+  border-radius: 4px;
+  max-width: 60ch;
+}
+
+.margin-note{
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 16px 18px;
+  font-size: 0.9rem;
+}
+
+.margin-note--alert{ border-color: var(--brick); }
+
+.margin-note__label{
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: var(--teal);
+  margin-bottom: 6px;
+}
+
+.margin-note--alert .margin-note__label{ color: var(--brick); }
+
+/* ---------- Listes ---------- */
+
+.hypotheses{
+  padding-left: 20px;
+  max-width: 68ch;
+}
+.hypotheses li{ margin-bottom: 14px; }
+
+.resource-list, .biblio{
+  padding-left: 20px;
+  max-width: 68ch;
+}
+.resource-list li, .biblio li{ margin-bottom: 10px; }
+
+.biblio{ font-size: 0.92rem; color: var(--ink-soft); }
+
+a{ color: var(--teal); }
+a:hover{ color: var(--brick); }
+
+/* ---------- Graphique et bouton audio ---------- */
+
+.chart-wrap{
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 16px;
+  max-width: 680px;
+}
+
+#exposure-chart{ width: 100%; height: auto; display: block; }
+
+.figure-caption{
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  margin-top: 8px;
+}
+
+.sound-button{
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--surface);
+  background: var(--teal);
+  border: none;
+  border-radius: 6px;
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.sound-button:hover{ background: var(--brick); }
+.sound-button:focus-visible{ outline: 3px solid var(--brick); outline-offset: 2px; }
+
+/* ---------- Pied de page ---------- */
+
+.site-footer{
+  border-top: 1px solid var(--line);
+  padding: 20px 28px 32px;
+  text-align: center;
+}
+
+.site-footer p{
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  max-width: none;
+}
+
+/* ---------- Accessibilité / responsive ---------- */
+
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior: auto; }
+}
+
+@media (max-width: 720px){
+  .hero, .block--split{
+    grid-template-columns: 1fr;
+  }
+  .page{ padding: 32px 18px 64px; }
+}
